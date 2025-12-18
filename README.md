@@ -92,3 +92,9 @@ Tree traversal হলো tree structure-এর প্রতিটি নোড�
 3. Post-order Traversal: প্রথমে বাম child visit করা হয়, তারপর ডান child এবং শেষে নোড।
 
 #### Another important travaesal technique is Level-order Traversal, যেখানে নোডগুলো লেভেল বাই লেভেল visit করা হয়, উপরের লেভেল থেকে নিচের লেভেলে।
+
+## Level order Travarsal:
+
+1.Get from the queue
+2.complete all task of the node whatever you want to do
+3.add imidiate child of the node to the queue
