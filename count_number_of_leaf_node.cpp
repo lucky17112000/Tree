@@ -58,34 +58,23 @@ Node *take_input()
     }
     return root;
 }
-
-void level_order(Node *root)
+int number_of_leaf_node(Node *root)
 {
     if (root == nullptr)
-    {
-        cout << "Tree Nai" << endl;
-        return;
-    }
-    queue<Node *> q;
-    q.push(root);
-    while (!q.empty())
-    {
-        Node *f = q.front();
-        q.pop();
-
-        cout << f->val << " ";
-
-        if (f->left != nullptr)
-            q.push(f->left);
-        if (f->right != nullptr)
-            q.push(f->right);
-    }
+        return 0;
+    int l = number_of_leaf_node(root->left);
+    int r = number_of_leaf_node(root->right);
+    if (l == 0 and r == 0)
+        return 1;
+    else
+        return l + r;
 }
 
 int main()
 {
     Node *root = take_input();
-    level_order(root);
+    // level_order(root);
+    cout << number_of_leaf_node(root);
 
     return 0;
 }
